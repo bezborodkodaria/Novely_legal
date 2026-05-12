@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Видалення акаунту / Account Deletion — Новелі</title>
+  <style>
+    :root {
+      --bg: #f9f6f2;
+      --surface: #ffffff;
+      --accent: #4a3728;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --border: #e2d9d0;
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 24px 16px 64px;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* Language toggle */
+    .lang-toggle {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+      justify-content: flex-end;
+    }
+
+    .lang-btn {
+      padding: 6px 16px;
+      border: 2px solid var(--accent);
+      border-radius: 20px;
+      background: transparent;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .app-icon {
+      font-size: 56px;
+      margin-bottom: 12px;
+      display: block;
+    }
+    img.app-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 20px;
+      object-fit: cover;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .app-name {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+    }
+
+    .doc-title {
+      font-size: 16px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .last-updated {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    /* Sections */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 28px 24px;
+      margin-bottom: 16px;
+    }
+
+    .section h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section h2 .icon {
+      font-size: 20px;
+    }
+
+    .section p,
+    .section li {
+      font-size: 15px;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .section ul,
+    .section ol {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    .section li {
+      margin-bottom: 4px;
+    }
+
+    .highlight {
+      background: #fdf3e7;
+      border-left: 3px solid var(--accent);
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .contact-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Language sections */
+    [data-lang] {
+      display: none;
+    }
+
+    [data-lang].visible {
+      display: block;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 40px;
+    }
+
+    @media (max-width: 480px) {
+      .section {
+        padding: 20px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('uk')" id="btn-uk">🇺🇦 Українська</button>
+      <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇬🇧 English</button>
+    </div>
+
+    <!-- UKRAINIAN -->
+    <div data-lang="uk" class="visible">
+      <div class="header">
+        <img src="Icon-App-1024x1024@1x.png" class="app-icon" alt="Novely">
+        <div class="app-name">Новелі</div>
+        <div class="doc-title">Видалення акаунту</div>
+        <div class="last-updated">Дата набрання чинності: 12 травня 2026 р.</div>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">👋</span>Про цю сторінку</h2>
+        <p>Ця сторінка пояснює, як видалити свій обліковий запис у додатку <strong>Новелі</strong> та які саме дані буде видалено.</p>
+        <p>Ви маєте право видалити свій акаунт у будь-який момент. Це безповоротна дія.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">📱</span>Як видалити акаунт у додатку</h2>
+        <p>Найшвидший спосіб — безпосередньо у додатку Новелі:</p>
+        <ol>
+          <li>Відкрийте додаток і увійдіть у свій акаунт</li>
+          <li>Перейдіть до вкладки <strong>Профіль</strong></li>
+          <li>Відкрийте <strong>Налаштування</strong> (значок ⚙️ у верхньому правому куті)</li>
+          <li>Прокрутіть униз і натисніть <strong>Видалити акаунт</strong></li>
+          <li>Підтвердьте видалення у діалоговому вікні</li>
+        </ol>
+        <div class="highlight">
+          Після підтвердження ви будете автоматично вийдені з акаунту, а процес видалення розпочнеться негайно.
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">📧</span>Альтернативний спосіб (через електронну пошту)</h2>
+        <p>Якщо ви не маєте доступу до додатку (наприклад, втратили пристрій або забули пароль), напишіть нам:</p>
+        <p style="margin-top: 8px;">
+          <strong>Електронна пошта:</strong>
+          <a href="mailto:novely.support@gmail.com?subject=Запит%20на%20видалення%20акаунту" class="contact-link">novely.support@gmail.com</a>
+        </p>
+        <p style="margin-top: 12px;">У листі вкажіть:</p>
+        <ul>
+          <li>Адресу електронної пошти, прив'язану до акаунту</li>
+          <li>Тему листа: <em>«Запит на видалення акаунту»</em></li>
+        </ul>
+        <p>Ми відповімо протягом 7 робочих днів і підтвердимо видалення після верифікації володіння обліковим записом.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">🗑️</span>Які дані буде видалено</h2>
+        <p>Після видалення акаунту з наших серверів буде безповоротно видалено:</p>
+        <ul>
+          <li>Обліковий запис та автентифікаційні дані (email, ідентифікатор Google/Apple)</li>
+          <li>Профіль користувача (ім'я, юзернейм, фото)</li>
+          <li>Вся бібліотека книг та сесії читання</li>
+          <li>Полиці та їх налаштування</li>
+          <li>Цілі читання та статистика</li>
+          <li>Список друзів та запити в друзі</li>
+          <li>Налаштування додатку та push-сповіщень</li>
+          <li>Дані про підписку (на стороні Новелі)</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">📝</span>Які дані зберігаються анонімно</h2>
+        <p>Деякі дані, пов'язані з соціальними функціями, зберігаються в анонімізованому вигляді (без зв'язку з вами):</p>
+        <ul>
+          <li><strong>Відгуки на книги</strong> — текст відгуку зберігається в каталозі книги, але без вашого імені та профілю. Це потрібно, щоб не пошкодити загальний рейтинг книги для інших користувачів.</li>
+        </ul>
+        <div class="highlight">
+          Якщо ви хочете, щоб ваші відгуки були повністю видалені (а не анонімізовані), вкажіть це в листі-запиті на видалення.
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">⏱️</span>Терміни видалення</h2>
+        <ul>
+          <li><strong>Негайно</strong> — обліковий запис деактивується, ви виходите з додатку</li>
+          <li><strong>До 30 днів</strong> — повне видалення з активних баз даних</li>
+          <li><strong>До 90 днів</strong> — видалення з системних резервних копій</li>
+        </ul>
+        <p>Дані підписки управляються Google Play / Apple App Store відповідно до їхніх політик — для скасування активної підписки використовуйте налаштування магазину додатків.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">⚠️</span>Зверніть увагу</h2>
+        <ul>
+          <li>Видалення акаунту <strong>не скасовує</strong> активну платну підписку. Скасуйте її окремо у Google Play або App Store перед видаленням, якщо потрібно.</li>
+          <li>Видалені дані <strong>неможливо</strong> відновити.</li>
+          <li>Після видалення ви можете створити новий акаунт з тим самим email, але старі дані до нього не повернуться.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">🔗</span>Пов'язані документи</h2>
+        <p>
+          <a href="privacy-policy.html" class="contact-link">Політика конфіденційності</a> — повний опис обробки даних
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">📬</span>Контакти</h2>
+        <p>Якщо у вас виникли запитання щодо видалення акаунту:</p>
+        <p style="margin-top: 8px;">
+          <strong>Електронна пошта:</strong>
+          <a href="mailto:novely.support@gmail.com" class="contact-link">novely.support@gmail.com</a>
+        </p>
+      </div>
+    </div>
+    <!-- END UKRAINIAN -->
+
+    <!-- ENGLISH -->
+    <div data-lang="en">
+      <div class="header">
+        <img src="Icon-App-1024x1024@1x.png" class="app-icon" alt="Novely">
+        <div class="app-name">Novely</div>
+        <div class="doc-title">Account Deletion</div>
+        <div class="last-updated">Effective date: May 12, 2026</div>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">👋</span>About This Page</h2>
+        <p>This page explains how to delete your account in the <strong>Novely</strong> app and exactly what data will be removed.</p>
+        <p>You have the right to delete your account at any time. This action is permanent.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">📱</span>How to Delete Your Account In-App</h2>
+        <p>The fastest way is directly from within the Novely app:</p>
+        <ol>
+          <li>Open the app and sign in to your account</li>
+          <li>Go to the <strong>Profile</strong> tab</li>
+          <li>Open <strong>Settings</strong> (⚙️ icon in the top right)</li>
+          <li>Scroll down and tap <strong>Delete Account</strong></li>
+          <li>Confirm deletion in the dialog</li>
+        </ol>
+        <div class="highlight">
+          After confirmation, you will be automatically signed out and the deletion process will start immediately.
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">📧</span>Alternative Method (via Email)</h2>
+        <p>If you no longer have access to the app (e.g., lost device or forgotten password), email us:</p>
+        <p style="margin-top: 8px;">
+          <strong>Email:</strong>
+          <a href="mailto:novely.support@gmail.com?subject=Account%20Deletion%20Request" class="contact-link">novely.support@gmail.com</a>
+        </p>
+        <p style="margin-top: 12px;">Please include:</p>
+        <ul>
+          <li>The email address linked to your account</li>
+          <li>Subject line: <em>"Account Deletion Request"</em></li>
+        </ul>
+        <p>We will respond within 7 business days and confirm deletion after verifying account ownership.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">🗑️</span>What Data Will Be Deleted</h2>
+        <p>After account deletion, the following data will be permanently removed from our servers:</p>
+        <ul>
+          <li>Account and authentication data (email, Google/Apple identifier)</li>
+          <li>User profile (name, username, photo)</li>
+          <li>Your entire book library and reading sessions</li>
+          <li>Shelves and their settings</li>
+          <li>Reading goals and statistics</li>
+          <li>Friends list and friend requests</li>
+          <li>App settings and push notification preferences</li>
+          <li>Subscription data (on the Novely side)</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">📝</span>What Data Is Anonymized</h2>
+        <p>Some data related to social features is retained in anonymized form (no link to you):</p>
+        <ul>
+          <li><strong>Book reviews</strong> — the review text remains in the book catalog, but without your name or profile. This is necessary to preserve the overall book rating for other users.</li>
+        </ul>
+        <div class="highlight">
+          If you want your reviews completely removed (not anonymized), please mention this in your deletion request email.
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">⏱️</span>Deletion Timeline</h2>
+        <ul>
+          <li><strong>Immediately</strong> — account is deactivated, you are signed out</li>
+          <li><strong>Within 30 days</strong> — full removal from active databases</li>
+          <li><strong>Within 90 days</strong> — removal from system backups</li>
+        </ul>
+        <p>Subscription data is managed by Google Play / Apple App Store under their own policies — to cancel an active subscription, use the App Store / Play Store settings.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">⚠️</span>Please Note</h2>
+        <ul>
+          <li>Deleting your account <strong>does not cancel</strong> an active paid subscription. Cancel it separately in Google Play or the App Store before deletion if needed.</li>
+          <li>Deleted data <strong>cannot</strong> be recovered.</li>
+          <li>You may create a new account with the same email afterward, but old data will not be restored.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">🔗</span>Related Documents</h2>
+        <p>
+          <a href="privacy-policy.html" class="contact-link">Privacy Policy</a> — full description of data processing
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">📬</span>Contact</h2>
+        <p>If you have any questions about account deletion:</p>
+        <p style="margin-top: 8px;">
+          <strong>Email:</strong>
+          <a href="mailto:novely.support@gmail.com" class="contact-link">novely.support@gmail.com</a>
+        </p>
+      </div>
+    </div>
+    <!-- END ENGLISH -->
+
+    <div class="footer">
+      &copy; 2026 Новелі / Novely &nbsp;·&nbsp; All rights reserved
+    </div>
+
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('visible', el.dataset.lang === lang);
+      });
+      document.getElementById('btn-uk').classList.toggle('active', lang === 'uk');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    }
+  </script>
+</body>
+</html>
