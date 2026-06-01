@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Умови використання / Terms of Use — Новелі</title>
+  <style>
+    :root {
+      --bg: #f9f6f2;
+      --surface: #ffffff;
+      --accent: #4a3728;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --border: #e2d9d0;
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 24px 16px 64px;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .lang-toggle {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+      justify-content: flex-end;
+    }
+
+    .lang-btn {
+      padding: 6px 16px;
+      border: 2px solid var(--accent);
+      border-radius: 20px;
+      background: transparent;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .app-icon {
+      font-size: 56px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    img.app-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 20px;
+      object-fit: cover;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .app-name {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+    }
+
+    .doc-title {
+      font-size: 16px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .last-updated {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 28px 24px;
+      margin-bottom: 16px;
+    }
+
+    .section h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section h2 .icon {
+      font-size: 20px;
+    }
+
+    .section p,
+    .section li {
+      font-size: 15px;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .section ul,
+    .section ol {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    .section li {
+      margin-bottom: 4px;
+    }
+
+    .highlight {
+      background: #fdf3e7;
+      border-left: 3px solid var(--accent);
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .contact-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+
+    [data-lang] {
+      display: none;
+    }
+
+    [data-lang].visible {
+      display: block;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 40px;
+    }
+
+    @media (max-width: 480px) {
+      .section {
+        padding: 20px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('uk')" id="btn-uk">🇺🇦 Українська</button>
+      <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇬🇧 English</button>
+    </div>
+
+    <div data-lang="uk" class="visible">
+      <div class="header">
+        <img src="Icon-App-1024x1024@1x.png" class="app-icon" alt="Novely">
+        <div class="app-name">Новелі</div>
+        <div class="doc-title">Умови використання</div>
+        <div class="last-updated">Дата набрання чинності: 1 червня 2026 р.</div>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">👋</span>Про ці Умови</h2>
+        <p>Ці Умови використання описують правила користування мобільним додатком <strong>Новелі</strong> («додаток», «ми», «нас», «наш»).</p>
+        <p>Використовуючи Новелі, створюючи обліковий запис або оформлюючи підписку, ви погоджуєтеся з цими Умовами. Якщо ви не погоджуєтесь із ними, будь ласка, не використовуйте додаток.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">📚</span>Що робить Новелі</h2>
+        <p>Новелі допомагає вести особисту бібліотеку, сканувати ISBN-штрихкоди книг, відстежувати прогрес читання, запускати сесії читання з таймером, створювати полиці, переглядати статистику та взаємодіяти з друзями навколо читання.</p>
+        <p>Додаток не є видавцем книг, книжковим магазином, бібліотекою або професійним консультантом. Ви самостійно відповідаєте за те, які книги додаєте, як описуєте їх і який контент публікуєте.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">👤</span>Обліковий запис</h2>
+        <ul>
+          <li>Для частини функцій потрібен обліковий запис.</li>
+          <li>Ви відповідаєте за безпеку доступу до свого облікового запису.</li>
+          <li>Інформація, яку ви надаєте в профілі, має бути достовірною та не порушувати права інших осіб.</li>
+          <li>Ви можете видалити обліковий запис у додатку або звернутися до нас за інструкціями на сторінці видалення акаунта.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">💬</span>Користувацький контент</h2>
+        <p>Ви можете створювати полиці, оцінки, відгуки, записи про книги та інший контент у додатку. Ви зберігаєте права на свій контент, але надаєте нам дозвіл зберігати, обробляти та показувати його в межах роботи додатку.</p>
+        <p>Ви погоджуєтеся не публікувати контент, який є незаконним, образливим, дискримінаційним, шахрайським, порушує авторські права або права приватності інших людей.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">✅</span>Дозволене використання</h2>
+        <p>Ви погоджуєтеся використовувати Новелі лише законним способом і не робити такого:</p>
+        <ul>
+          <li>не намагатися зламати, перевантажити або обійти технічні обмеження додатку;</li>
+          <li>не використовувати автоматизовані скрипти для масового збору даних;</li>
+          <li>не видавати себе за іншу особу;</li>
+          <li>не публікувати шкідливий або незаконний контент;</li>
+          <li>не використовувати додаток способом, що заважає іншим користувачам.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">⭐</span>Преміум і підписки</h2>
+        <p>Новелі може пропонувати платну підписку Premium з додатковими можливостями. Доступні плани можуть включати місячну та річну підписку.</p>
+        <ul>
+          <li>Ціна, період оплати, наявність пробного періоду та інші умови показуються на екрані покупки перед підтвердженням.</li>
+          <li>Підписка автоматично поновлюється, якщо її не скасувати до завершення поточного розрахункового періоду.</li>
+          <li>Оплата здійснюється через Apple App Store або Google Play залежно від платформи.</li>
+          <li>Керування підпискою, скасування та запити на повернення коштів здійснюються через Apple App Store або Google Play відповідно до їхніх правил.</li>
+          <li>Якщо ви скасуєте підписку, доступ до Premium зазвичай зберігається до кінця вже оплаченого періоду.</li>
+        </ul>
+        <div class="highlight">
+          Видалення облікового запису в Новелі не скасовує активну підписку в Apple App Store або Google Play. Скасуйте підписку окремо в налаштуваннях відповідного магазину, якщо це потрібно.
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">🔄</span>Відновлення покупок</h2>
+        <p>Якщо ви вже оформили Premium, але доступ не відображається після перевстановлення додатку, зміни пристрою або повторного входу, скористайтеся функцією відновлення покупок у налаштуваннях додатку.</p>
+        <p>Відновлення працює через Apple App Store або Google Play і залежить від того, який обліковий запис магазину використовувався для покупки.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">📖</span>Книжкові дані та сторонні сервіси</h2>
+        <p>Новелі може використовувати сторонні сервіси для пошуку книжкової інформації, аналітики, повідомлень, обробки підписок, авторизації та збереження даних. Ми прагнемо показувати точну інформацію про книги, але не гарантуємо, що назви, автори, обкладинки, ISBN або інші метадані завжди будуть повними чи без помилок.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">🔐</span>Приватність</h2>
+        <p>Обробка персональних даних описана в нашій Політиці конфіденційності. Вона є частиною цих Умов у тій мірі, у якій пояснює, як ми збираємо, використовуємо, зберігаємо та видаляємо дані.</p>
+        <p>
+          <a href="privacy-policy.html" class="contact-link">Політика конфіденційності</a>
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">🗑️</span>Видалення акаунта</h2>
+        <p>Ви можете видалити свій обліковий запис у додатку. Детальні інструкції та опис того, які дані видаляються або анонімізуються, наведені на окремій сторінці.</p>
+        <p>
+          <a href="account_deletion.html" class="contact-link">Видалення акаунта</a>
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">⚠️</span>Відмова від гарантій</h2>
+        <p>Новелі надається «як є» і «за наявності». Ми прагнемо підтримувати стабільну роботу додатку, але не гарантуємо, що він завжди буде безперервним, безпомилковим або доступним на всіх пристроях.</p>
+        <p>Ми не несемо відповідальності за втрату даних, неможливість доступу, помилки сторонніх сервісів або непрямі збитки, якщо інше не вимагається застосовним законом.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">📝</span>Зміни до цих Умов</h2>
+        <p>Ми можемо оновлювати ці Умови. Якщо зміни є суттєвими, ми повідомимо про них у додатку або іншим доступним способом. Продовження використання додатку після набрання чинності оновленими Умовами означає вашу згоду з ними.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">📬</span>Контакти</h2>
+        <p>Якщо у вас є питання щодо цих Умов:</p>
+        <p style="margin-top: 8px;">
+          <strong>Електронна пошта:</strong>
+          <a href="mailto:novely.support@gmail.com" class="contact-link">novely.support@gmail.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div data-lang="en">
+      <div class="header">
+        <img src="Icon-App-1024x1024@1x.png" class="app-icon" alt="Novely">
+        <div class="app-name">Novely</div>
+        <div class="doc-title">Terms of Use</div>
+        <div class="last-updated">Effective date: June 1, 2026</div>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">👋</span>About These Terms</h2>
+        <p>These Terms of Use describe the rules for using the <strong>Novely</strong> mobile app ("app", "we", "us", "our").</p>
+        <p>By using Novely, creating an account, or purchasing a subscription, you agree to these Terms. If you do not agree, please do not use the app.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">📚</span>What Novely Does</h2>
+        <p>Novely helps you maintain a personal book library, scan ISBN barcodes, track reading progress, run timed reading sessions, create shelves, view statistics, and interact with friends around reading.</p>
+        <p>The app is not a publisher, bookstore, library, or professional advisory service. You are responsible for the books you add, how you describe them, and any content you publish.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">👤</span>Account</h2>
+        <ul>
+          <li>Some features require an account.</li>
+          <li>You are responsible for keeping access to your account secure.</li>
+          <li>Profile information you provide must be accurate and must not infringe the rights of others.</li>
+          <li>You may delete your account in the app or contact us using the instructions on the account deletion page.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">💬</span>User Content</h2>
+        <p>You may create shelves, ratings, reviews, book records, and other content in the app. You keep your rights to your content, but grant us permission to store, process, and display it as needed to operate the app.</p>
+        <p>You agree not to post content that is illegal, abusive, discriminatory, fraudulent, infringes copyright, or violates another person's privacy rights.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">✅</span>Acceptable Use</h2>
+        <p>You agree to use Novely lawfully and not to:</p>
+        <ul>
+          <li>attempt to hack, overload, or bypass technical restrictions in the app;</li>
+          <li>use automated scripts to collect data at scale;</li>
+          <li>impersonate another person;</li>
+          <li>post harmful or illegal content;</li>
+          <li>use the app in a way that disrupts other users.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">⭐</span>Premium and Subscriptions</h2>
+        <p>Novely may offer a paid Premium subscription with additional features. Available plans may include monthly and annual subscriptions.</p>
+        <ul>
+          <li>The price, billing period, trial availability, and other offer terms are shown on the purchase screen before confirmation.</li>
+          <li>Subscriptions renew automatically unless canceled before the end of the current billing period.</li>
+          <li>Payment is processed through Apple App Store or Google Play, depending on your platform.</li>
+          <li>Subscription management, cancellation, and refund requests are handled through Apple App Store or Google Play under their respective rules.</li>
+          <li>If you cancel a subscription, Premium access usually continues until the end of the already paid billing period.</li>
+        </ul>
+        <div class="highlight">
+          Deleting your Novely account does not cancel an active Apple App Store or Google Play subscription. Cancel the subscription separately in the relevant store settings if needed.
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">🔄</span>Restoring Purchases</h2>
+        <p>If you already purchased Premium but access does not appear after reinstalling the app, changing devices, or signing in again, use Restore purchases in the app settings.</p>
+        <p>Restore is handled through Apple App Store or Google Play and depends on the store account used for the purchase.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">📖</span>Book Data and Third-Party Services</h2>
+        <p>Novely may use third-party services for book lookup, analytics, notifications, subscription processing, authentication, and data storage. We aim to show accurate book information, but we do not guarantee that titles, authors, covers, ISBNs, or other metadata will always be complete or error-free.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">🔐</span>Privacy</h2>
+        <p>Personal data processing is described in our Privacy Policy. It forms part of these Terms to the extent it explains how we collect, use, store, and delete data.</p>
+        <p>
+          <a href="privacy-policy.html" class="contact-link">Privacy Policy</a>
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">🗑️</span>Account Deletion</h2>
+        <p>You can delete your account in the app. Detailed instructions and an explanation of which data is deleted or anonymized are available on a separate page.</p>
+        <p>
+          <a href="account_deletion.html" class="contact-link">Account Deletion</a>
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">⚠️</span>Disclaimer</h2>
+        <p>Novely is provided "as is" and "as available". We aim to keep the app stable, but we do not guarantee that it will always be uninterrupted, error-free, or available on every device.</p>
+        <p>We are not responsible for data loss, access issues, third-party service errors, or indirect damages unless required by applicable law.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">📝</span>Changes to These Terms</h2>
+        <p>We may update these Terms. If changes are significant, we will notify you in the app or by another available method. Continued use of the app after updated Terms take effect means you accept them.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="icon">📬</span>Contact</h2>
+        <p>If you have questions about these Terms:</p>
+        <p style="margin-top: 8px;">
+          <strong>Email:</strong>
+          <a href="mailto:novely.support@gmail.com" class="contact-link">novely.support@gmail.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 Новелі / Novely &nbsp;·&nbsp; All rights reserved
+    </div>
+
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('visible', el.dataset.lang === lang);
+      });
+      document.getElementById('btn-uk').classList.toggle('active', lang === 'uk');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    }
+  </script>
+</body>
+</html>
